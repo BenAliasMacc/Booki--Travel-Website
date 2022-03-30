@@ -1,0 +1,20 @@
+h2 {
+    font-size: 1.25rem;
+}
+
+a {
+    color: $text-color;
+    text-decoration: none;
+}
+  
+li {
+    list-style-type: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+header, section, .footer__container {
+    margin: 0 5%;
+}

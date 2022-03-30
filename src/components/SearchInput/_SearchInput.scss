@@ -1,0 +1,35 @@
+.searchInput {
+    display: flex;
+    height: 2.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.searchInput__label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: $tertiary-color;
+    border-radius: 10px 0 0 10px;
+    & img {
+        width: 0.75rem;
+    }
+}
+
+.searchInput__button {
+    background-color: $primary-color;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    padding: 0 1rem;
+}
+
+.searchInput__input {
+    width: 15rem;
+    padding-left: 1rem;
+    border: 1px solid $tertiary-color;
+}
+
