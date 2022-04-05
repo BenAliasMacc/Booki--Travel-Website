@@ -1,0 +1,19 @@
+.accomodations {
+    flex: 1;
+    &__container {
+        padding: 1.5rem 1.5rem;
+        &__title {
+            margin-bottom: 1.5rem;
+        }
+        &__cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1.5rem;
+        }
+        &__moreContent {
+            font-weight: bold;
+            margin-top: 1.5rem;
+            border: none;
+        }
+    }
+}

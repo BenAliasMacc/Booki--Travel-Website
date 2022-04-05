@@ -1,0 +1,10 @@
+.accomodationsSection {
+    display: flex;
+    margin-top: 1.5rem;
+    gap: 1.5rem;
+}
+
+.accomodations, .accomodationsPopular {
+    background-color: $tertiary-color;
+    border-radius: $container-borderRadius;
+}
