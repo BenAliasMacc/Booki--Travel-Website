@@ -1,5 +1,4 @@
 .footer {
-    height: 200px;
     margin-top: 3rem;
     background-color: $tertiary-color;
 }
@@ -8,7 +7,7 @@
     max-width: 1280px;
     display: flex;
     justify-content: space-between;
-    padding-block: 1.5rem;
+    padding-block: 3rem;
     &__menu {
         & h2 {
             margin-bottom: 1rem;

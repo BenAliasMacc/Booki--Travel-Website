@@ -1,7 +1,15 @@
 .cardPopularAccomodations {
-    display: flex;
     background-color: white;
     border-radius: $container-borderRadius;
+    box-shadow: $cards-boxShadow;
+    transition: 0.3s;
+    &:hover {
+        box-shadow: $cards-boxShadow-hover;
+        transform: scale(1.02);
+    }
+    &--link {
+        display: flex;
+    }
     &__illustration img {
         object-fit: cover;
         height: 100%;

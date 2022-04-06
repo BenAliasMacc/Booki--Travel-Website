@@ -5,6 +5,12 @@
     height: 2.5rem;
     border: 2px solid $tertiary-color;
     border-radius: 25px;
+    cursor: pointer;
+    &:hover {
+        background-color: $secondary-color;
+        border: $secondary-color;
+        transition: 1s;
+    }
     &__logo {
         position: absolute;
         left: -4px;
@@ -14,10 +20,23 @@
         height: 2.5rem;
         width: 2.5rem;
         background-color: $secondary-color;
+        border: 2px solid $secondary-color;
         border-radius: 50%;
+    }
+    &:hover > &__logo {
+        background-color: white;
+        border: 2px solid $primary-color;
+        left:calc(100% - 40px);
+        right : 100px;
+        transition: 1s;
+        
     }
     &__text {
         font-weight: bold;
         padding-inline: 3rem 1.5rem;
+    }
+    &:hover > &__text {
+        padding-inline: 1.5rem 3rem;
+        transition: 1s;
     }
 }

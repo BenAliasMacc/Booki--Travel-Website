@@ -6,6 +6,12 @@
     border-radius: $container-borderRadius;
     min-width: 230px;
     height: 240px;
+    box-shadow: $cards-boxShadow;
+    transition: 0.3s;
+    &:hover {
+        box-shadow: $cards-boxShadow-hover;
+        transform: scale(1.02);
+    }
     &__illustration img {
         object-fit: cover;
         width: 100%;
