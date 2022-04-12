@@ -1,3 +1,5 @@
+import { useState } from "react"
+
 type filtersDataProps = {
     filterData:
         {
@@ -8,15 +10,18 @@ type filtersDataProps = {
     key: number
 }
 
+export const Filter = ({filterData, key}: filtersDataProps) => {
 
-export const Filter = (props: filtersDataProps) => {
+    const [active, setActive] = useState(false)
 
-    const filterData = props.filterData
+    const handleFilterAnimation = () => {
+        setActive(!active)
+    };
 
   return (
-    <div className="filter" key={props.key}>
-        <div className="filter__logo"><img src={filterData.logo} alt={filterData.description} /></div>
-        <p className="filter__text">{filterData.name}</p>
+    <div className={`filter filter-animations__${active}`} key={key} onClick={handleFilterAnimation}>
+        <div className={`filter__logo filter-animations-logo__${active}`}><img src={filterData.logo} alt={filterData.description} /></div>
+        <p className={`filter__text filter-animations-text__${active}`}>{filterData.name}</p>
     </div>
   )
 }

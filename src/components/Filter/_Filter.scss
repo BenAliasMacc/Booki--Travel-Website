@@ -3,17 +3,10 @@
     display: flex;
     align-items: center;
     height: 2.5rem;
-    border: 2px solid $tertiary-color;
     border-radius: 25px;
     cursor: pointer;
-    &:hover {
-        background-color: $secondary-color;
-        border: $secondary-color;
-        transition: 1s;
-    }
     &__logo {
         position: absolute;
-        left: -4px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -23,19 +16,45 @@
         border: 2px solid $secondary-color;
         border-radius: 50%;
     }
-    &:hover > &__logo {
+    &__text {
+        font-weight: bold;
+    }
+}
+
+// Animations filtres
+.filter-animations {
+    &__false {
+        background-color: white;
+        border: 2px solid $tertiary-color;
+        transition: 1s;
+    }
+    &__true {
+        background-color: $secondary-color;
+        border: $secondary-color;
+        transition: 1s;
+    }
+}
+.filter-animations-logo {
+    &__false {
+        background-color: $secondary-color;
+        border: 2px solid $secondary-color;
+        left: -4px;
+        transition: 1s;
+    }
+    &__true {
         background-color: white;
         border: 2px solid $primary-color;
         left:calc(100% - 40px);
         right : 100px;
         transition: 1s;
-        
     }
-    &__text {
-        font-weight: bold;
+}
+.filter-animations-text {
+    &__false {
         padding-inline: 3rem 1.5rem;
+        transition: 1s;
     }
-    &:hover > &__text {
+    &__true {
         padding-inline: 1.5rem 3rem;
         transition: 1s;
     }

@@ -10,12 +10,13 @@
 }
 
 .header__navbar {
+    display: flex;
+    align-items: center;
     height: 100%;
     &__list {
         display: flex;
         gap: 0.75rem;
-        height: 100%;
-        & a {
+        &__link > a {
             display: flex;
             align-items: center;
             height: 100%;
@@ -26,7 +27,88 @@
             }
         }
     }
+    &__burger-menu {
+        display: none;
+    }
 }
 
+// --------------small devices--------------
+@media screen and (max-width: 768px) {
+    .header__navbar__list {
+        flex-direction: column;
+        width: 0;
+        height: calc(100vh - 72px);
+        position: absolute;
+        top: 72px;
+        right: 0;
+        gap: 0;
+        background-color: $primary-color;
+        z-index: 1;
+        transition: all 0.5s ease-in-out;
+        &__link > a {
+            font-size: 1rem;
+            font-weight: bold;
+            padding-left: 2rem;
+            padding-top: 2rem;
+            color: white;
+            transition: all 0.4s ease-in-out;
+            &:hover {
+                padding-left: 3rem;
+                color: white;
+                border: none;
+                letter-spacing: 3px;
+            }
+        }
+    }
+
+    .show-navbar .header__navbar__list {
+        width: 100%;
+    }
+
+    .header__navbar__burger-menu {
+        display: block;
+        position: relative;
+        padding: 0;
+        width: 30px;
+        height: 30px;
+        border: none;
+        background: transparent;
+        &__bar {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background-color: $primary-color;
+            border-radius: 3px;
+            transition: all 0.5s ease-in-out;
+            &::before, &::after {
+                content: "";
+                width: 30px;
+                height: 3px;
+                position: absolute;
+                left: 0;
+                background-color: $primary-color;
+                border-radius: 3px;
+                transition: all 0.5s ease-in-out;
+            }
+            &::before {
+                transform: translateY(-8px);
+            }
+            &::after {
+                transform: translateY(+8px);
+            }
+        }
+    }
+
+    .show-navbar .header__navbar__burger-menu__bar {
+        width: 0;
+        background: transparent;
+    }
+    .show-navbar .header__navbar__burger-menu__bar::before {
+        transform: rotate(45deg);
+    }
+    .show-navbar .header__navbar__burger-menu__bar::after {
+        transform: rotate(-45deg);
+    }
+}
 
 

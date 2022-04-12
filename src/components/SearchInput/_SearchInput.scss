@@ -37,6 +37,10 @@
         box-shadow: inset -3px 0px 5px -2px $primary-color;
         outline: none;
     }
+    @media screen and (max-width: 576px) {
+        width: 10.5rem;
+        padding-inline: 0.5rem 0;
+    }
 }
 
 .searchInput__button {
@@ -46,6 +50,7 @@
     border: none;
     border-radius: 0 10px 10px 0;
     padding: 0 0.75rem;
+    transition: 0.3s;
     &:hover {
         background-color: lighten($primary-color, 10%);
     }
