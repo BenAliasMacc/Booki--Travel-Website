@@ -25,3 +25,17 @@
         padding: 1rem;
     }
 }
+
+// ------------Small Devices------------
+@media screen and (max-width: 576px) {
+    .cardPopularAccomodations {
+        &__illustration {
+            & img {
+                width: 100px;
+            }
+        }
+        &__informations {
+            padding: 0.5rem;
+        }
+    }
+}

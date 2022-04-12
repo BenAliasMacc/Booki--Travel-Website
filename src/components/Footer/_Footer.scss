@@ -19,4 +19,18 @@
             }
         }
     }
+    @media screen and (max-width: 576px) {
+        flex-direction: column;
+        margin-bottom: rem;
+        padding-block: 1.5rem;
+        & h2 {
+            margin-block: 1rem 0.5rem;
+        }
+        & li {
+            margin-bottom: 0.5rem;
+            :hover {
+                text-decoration: underline;
+            }
+        }
+    }
 }

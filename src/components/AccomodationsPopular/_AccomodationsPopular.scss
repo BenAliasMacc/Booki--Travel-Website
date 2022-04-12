@@ -1,5 +1,5 @@
 .accomodationsPopular {
-    min-width: 380px;
+    min-width: 360px;
     &__container {
         height: 100%;
         padding: 1.5rem 1.5rem;
@@ -13,6 +13,22 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+        }
+    }
+}
+
+// ------------Small Devices------------
+@media screen and (max-width: 576px) {
+    .accomodationsPopular {
+        min-width: 260px;
+        border-radius: 0;
+        &__container {
+            padding-inline: 0.5rem;
+            &__cards {
+                height: auto;
+                justify-content:flex-start;
+                gap: 1.5rem;
+            }
         }
     }
 }

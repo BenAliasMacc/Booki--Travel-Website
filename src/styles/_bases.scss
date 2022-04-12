@@ -21,4 +21,7 @@ button {
 
 header, section, .footer__container {
     margin: 0 2rem;
+    @media screen and (max-width: 576px) {
+        margin-inline: 0.5rem;
+    }
 }
