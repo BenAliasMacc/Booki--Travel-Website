@@ -9,7 +9,7 @@ const initialState = {
     familyFilter: false,
     romanticFilter: false,
     petsFilter: false,
-    filter: ""
+    filter: []
 }
 
 const reducerCallApi = (state = initialState, { type }: filtersAction ) => {    

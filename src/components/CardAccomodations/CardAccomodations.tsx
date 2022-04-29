@@ -19,8 +19,6 @@ export const CardAccomodations = ({ display }: CardAccomodationsProps) => {
 
   const accomodations = useAppSelector(state => state.callApi.accomodations)
   const filterTag = useAppSelector(state => state.filters.filter)
-  console.log(filterTag);
-  
 
   const filter = () => {
     if (filterTag && filterTag !== "" ) {
