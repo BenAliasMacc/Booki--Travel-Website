@@ -21,6 +21,10 @@
             margin-top: 1.5rem;
             border: none;
             background: transparent;
+            &--center {
+                display: flex;
+                align-items: center;
+            }
         }
     }
     @media screen and (max-width: 992px) {

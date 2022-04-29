@@ -13,7 +13,7 @@ export const CardPopularAccomodation = () => {
 
         <div className="cardPopularAccomodations__informations">
           <h3>Auberge de la cannebière</h3>
-          <p>Nuit à partir de <span>25€</span></p>
+          <p>Nuit à partir de <span style={{fontWeight: 'bold'}}>25€</span></p>
           <div  className="cardPopularAccomodations__informations__rating">
             <img src={blueStar} alt="" />
             <img src={blueStar} alt="" />

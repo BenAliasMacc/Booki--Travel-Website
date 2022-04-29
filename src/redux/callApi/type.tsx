@@ -1,0 +1,3 @@
+export const CALL_API_SUCCESS = 'CALL_API_SUCCESS';
+export const CALL_API_FAILED = 'CALL_API_FAILED';
+export const CALL_API_LOAD = 'CALL_API_LOAD';

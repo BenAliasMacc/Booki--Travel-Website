@@ -4,8 +4,6 @@ import magnifyingGlass from '../../assets/images/logo/Magnifying-Glass.svg'
 
 export const SearchInput = () => {
 
-  console.log(window.screen.width);
-
   const [smallScreen, setSmallScreen] = useState(false)
 
   useEffect(() => {
