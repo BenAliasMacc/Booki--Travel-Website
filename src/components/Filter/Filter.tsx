@@ -1,6 +1,6 @@
 import { useState } from "react"
-import { useAppDispatch, useAppSelector } from "../../Hooks"
-import { economicFilter, familyFilter, romanticFilter, petsFilter } from "../../redux/filters/actionFilters"
+import { useAppDispatch } from "../../Hooks"
+import { economicFilter, familyFilter, romanticFilter, petsFilter } from "../../redux/filtersButton/actionFiltersButton"
 
 type filtersDataProps = {
     filterData:

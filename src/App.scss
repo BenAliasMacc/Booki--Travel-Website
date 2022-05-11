@@ -1,9 +1,11 @@
 @import "./styles/variables";
 @import "./styles/bases";
 
+@import "./pages/Home/Home";
 @import "./components/Header/Header";
 @import "./components/SearchSection/SearchSection";
 @import "./components/SearchInput/SearchInput";
+@import "./components/SearchButton/SearchButton";
 @import "./components/FiltersSection/FilterSection";
 @import "./components/Filter/Filter";
 @import "./components/AccomodationsSection/AccomodationsSection";

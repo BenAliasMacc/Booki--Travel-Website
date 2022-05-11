@@ -1,7 +1,7 @@
 import { applyMiddleware, combineReducers, createStore } from "redux";
 import thunk from 'redux-thunk'
 import reducerCallApi from "./callApi/reducerCallApi";
-import reducerFilters from "./filters/reducerFilters"
+import reducerFilters from "./filtersButton/reducerFiltersButton"
 
 const rootReducer = combineReducers({
     callApi: reducerCallApi,

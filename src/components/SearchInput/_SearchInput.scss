@@ -1,9 +1,9 @@
 .searchInput {
+    position: relative;
     display: flex;
-    height: 2rem;
-    margin-top: 1rem;
-    margin-bottom: 1.5rem;
+    margin-block: 1rem 1.5rem;
     &--focus {
+        flex: 1;
         display: flex;
         &:focus-within > label {
             border: 0.5px solid $primary-color;
@@ -18,8 +18,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 2rem;
-    width: 2rem;
     background-color: $tertiary-color;
     border-radius: 10px 0 0 10px;
     & img {
@@ -28,7 +26,7 @@
 }
 
 .searchInput__input {
-    width: 14rem;
+    width: 100%;
     padding-inline: 1rem;
     border: 1px solid $tertiary-color;
     &:focus-visible  {
@@ -38,21 +36,23 @@
         outline: none;
     }
     @media screen and (max-width: 576px) {
-        width: 10.5rem;
         padding-inline: 0.5rem 0;
     }
 }
 
-.searchInput__button {
-    background-color: $primary-color;
-    color: white;
-    font-weight: bold;
-    border: none;
-    border-radius: 0 10px 10px 0;
-    padding: 0 0.75rem;
-    transition: 0.3s;
-    &:hover {
-        background-color: lighten($primary-color, 10%);
+.searchInput__selection {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    width: 10rem;
+    background-color: white;
+    z-index: 1;
+    border: solid 1px grey;
+    & ul {
+        & li {
+            height: 2rem;
+            padding-left: 1rem;
+        }
     }
 }
 

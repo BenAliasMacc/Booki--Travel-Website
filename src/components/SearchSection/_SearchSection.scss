@@ -1,3 +1,8 @@
-.searchSection h2 {
-    margin-bottom: 0.5rem;
+.searchSection {
+    & h2 {
+        margin-bottom: 0.5rem;
+    }
+    & p {
+        margin-bottom: 1rem;
+    }
 }

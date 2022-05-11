@@ -9,10 +9,10 @@ const initialState = {
     familyFilter: false,
     romanticFilter: false,
     petsFilter: false,
-    filter: []
+    filter: ""
 }
 
-const reducerCallApi = (state = initialState, { type }: filtersAction ) => {    
+const reducerFilters= (state = initialState, { type }: filtersAction ) => {    
 
     switch (type) {
         case ECONOMIC_FILTER:
@@ -43,4 +43,4 @@ const reducerCallApi = (state = initialState, { type }: filtersAction ) => {
     }
 }
 
-export default reducerCallApi;
+export default reducerFilters;

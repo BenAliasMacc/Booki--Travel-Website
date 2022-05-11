@@ -1,35 +1,52 @@
-import { useEffect, useState } from 'react';
-import places from '../../assets/images/logo/Places.svg'
-import magnifyingGlass from '../../assets/images/logo/Magnifying-Glass.svg'
+import React from 'react'
+import placesIcon from '../../assets/images/logo/Places.svg'
+import { useAppSelector } from '../../Hooks'
+import { SearchButton } from '../SearchButton/SearchButton'
 
-export const SearchInput = () => {
+type SearchInputProps = {
+  styleInput: React.CSSProperties,
+  styleLabel: React.CSSProperties,
+  styleButton?: {
+    small: React.CSSProperties
+    large: React.CSSProperties
+  }
+}
 
-  const [smallScreen, setSmallScreen] = useState(false)
+export const SearchInput = ({ styleInput, styleLabel, styleButton }: SearchInputProps) => {
 
-  useEffect(() => {
-    window.screen.width > 576 ? setSmallScreen(false) : setSmallScreen(true)
-
-    const updateMedia = () => {
-      window.screen.width > 576 ? setSmallScreen(false) : setSmallScreen(true)
-    };
-
-    window.addEventListener('resize', updateMedia);
-    return () => window.removeEventListener('resize', updateMedia);
-
+  const accomodations = useAppSelector((state) => state.callApi.accomodations)
+  const placesArray = Array.from(accomodations.map(accomodation => accomodation.place));
+  const places = placesArray.reduce(function(acc, valCourante) {
+    
+    if(acc.indexOf(valCourante) === -1) {
+      acc.push(valCourante);
+    }
+    return acc
   }, [])
+  
+
+  const handleInput = (e) => {
+    console.log(e.target.value);
+  }
 
   return (
-    <div className="searchInput">
+    <div className="searchInput" style={styleInput}>
       <div className='searchInput--focus'>
-        <label htmlFor='search-input' className='searchInput__label'><img src={places} alt='Saisir le lieu' /></label>
-        <input type='search' placeholder="Saisissez votre destination" id="search-input" className='searchInput__input' />
+        <label htmlFor='search-input' className='searchInput__label' style={styleLabel} >
+          <img src={placesIcon} alt='Saisir le lieu' />
+        </label>
+        <input type='search' placeholder="Saisissez votre destination" id="search-input" className='searchInput__input' onChange={(e) => handleInput(e)} />
+        <div className="searchInput__selection">
+          <ul>
+            {
+              places?.map((place, id) => <li key={id}>{place}</li>)
+            }
+          </ul>
+        </div>
       </div>
 
-      { smallScreen ? (
-        <button className='searchInput__button'><img src={magnifyingGlass} alt='loupe' /></button> 
-      ) : (
-        <button className='searchInput__button'>Rechercher</button>
-      )}
+      <SearchButton styles={styleButton} />
+
     </div>
   )
 }
